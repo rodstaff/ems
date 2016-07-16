@@ -17,6 +17,7 @@
       <td><%= empl.last_name %></td>
       <td><%= empl.email %></td>
       <td><%= link_to 'Show', employee_path(empl) %></td>
+      <td><%= link_to 'Edit', edit_employee_path(empl) %></td>
     </tr>
   <% end %>
 </table>
