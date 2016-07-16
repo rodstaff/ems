@@ -1,9 +1,10 @@
 <h2>New Employee</h2>
+
 <%= form_for :employee, url: employees_path do |f| %>
  <p>
 <!--  Apparently, you cannot do this!!!<%= f.label :id %>
     <%= f.text_field :id %> -->
-
+ 
     <%= f.label :first_name %>
     <%= f.text_field :first_name %>
 
@@ -14,5 +15,6 @@
     <%= f.text_field :email %>
 
     <%= f.submit %>
-  </p> 
+ </p> 
 <% end %>
+<%= link_to 'Back', employees_path %>

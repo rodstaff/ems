@@ -28,8 +28,11 @@ class EmployeesController < ApplicationController
   def create
     @employee = Employee.new(employee_params)
  
-    @employee.save
-    redirect_to @employee
+    if  @employee.save
+      redirect_to @employee
+    else
+      render 'new'
+    end
   end
  
   private
