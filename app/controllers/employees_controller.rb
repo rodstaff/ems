@@ -11,6 +11,11 @@ class EmployeesController < ApplicationController
   end
 
   def new
+    @employee = Employee.new
+  end
+
+  def edit
+    @employee = Employee.find(params[:id])
   end
 
   # def create
@@ -43,6 +48,13 @@ class EmployeesController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @employee = Employee.find(params[:id])
+    @employee.destroy
+ 
+    redirect_to employees_path
   end
  
   private
