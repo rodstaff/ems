@@ -18,18 +18,6 @@ class EmployeesController < ApplicationController
     @employee = Employee.find(params[:id])
   end
 
-  # def create
-  #   render plain: params[:employee].inspect
-  # end
-
-  # def create
-  # @employee = Employee.new(params[:employee])
- 
-  # @employee.save
-  # redirect_to @employee
-  # end
-
-  #Below are modified methods improved for security
   def create
     @employee = Employee.new(employee_params)
  

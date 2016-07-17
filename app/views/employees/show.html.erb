@@ -1,3 +1,4 @@
+<h2>Employee</h2>
 <p>
   <strong>ID:</strong>
   <%= @employee.id %>
@@ -18,6 +19,8 @@
   <%= @employee.email %>
 </p>
 
+<h2>Authorized cars</h2>
+
 <% @employee.cars.each do |car| %>
   <p>
     <strong>Model:</strong>
@@ -30,7 +33,7 @@
   </p>
 <% end %> 
 
-<h2>Add cars:</h2>
+<h2>Add cars</h2>
 <%= form_for([@employee, @employee.cars.build]) do |f| %>
   <p>
     <%= f.label :model %><br>
