@@ -4,6 +4,8 @@ Rails.application.routes.draw do
  
   root 'welcome#index'
 
-  resources :employees
+  resources :employees do
+  	resources :cars
+  end
 
 end

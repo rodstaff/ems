@@ -8,6 +8,7 @@
     <th>First Name</th>
     <th>Last Name</th>
     <th>Email</th>
+<!--     <th>Cars</th> -->
   </tr>
  
   <% @employees.each do |empl| %>
@@ -16,6 +17,7 @@
       <td><%= empl.first_name %></td>
       <td><%= empl.last_name %></td>
       <td><%= empl.email %></td>
+  <!--     <td><%= empl.cars %></td> -->
       <td><%= link_to 'Show', employee_path(empl) %></td>
       <td><%= link_to 'Edit', edit_employee_path(empl) %></td>
       <td><%= link_to 'Destroy', employee_path(empl),
