@@ -1,6 +1,6 @@
 class EmployeesController < ApplicationController
 
-  http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
+  http_basic_authenticate_with name: "rod", password: "secret", except: [:index, :show]
 
   def index
   	@employees = Employee.all
